@@ -1,10 +1,5 @@
 export const backendUrlteacherRegister = "http://localhost:8000/SmartHallTicket_Server/registerAdmin";
 export const backendUrlteacherLogin="http://localhost:8000/SmartHallTicket_Server/authenticateAdmin";
-export const backendUploadImage = "http://localhost:4000/online_course/CouseApi/UploadImage/";
-export const backendUrlCourseAdd = "http://localhost:4000/online_course/CouseApi/addCourse/";
-export const backendUrlGetCourse = "http://localhost:4000/Wanderlust_Server/image/cources/";
-
-
 export const backendUrlGetCLassRooms = "http://localhost:8000/SmartHallTicket_Server/getAllClassrooms/";
 export const backendUrlAddCLassRooms = "http://localhost:8000/SmartHallTicket_Server/addClassroom/";
 export const backendUrlGetBranches = "http://localhost:8000/SmartHallTicket_Server/branches/";

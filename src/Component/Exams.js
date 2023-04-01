@@ -379,6 +379,8 @@ class Exams extends Component{
     render(){
         var exams = this.state.exams;
         const dateObj = new Date();
+        var day = dateObj.getDate() - 1;
+        dateObj.setDate(day);
         const output = this.createDateToString(dateObj) + "T00:00";
 
         return(

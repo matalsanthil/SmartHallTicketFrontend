@@ -26,6 +26,8 @@ class Home extends Component{
             classRoom:"",
             scannedMessage : "",
             scannedErrorMessage: "",
+            subject : "",
+            seatNumber : ""
         }
     }
 
@@ -53,6 +55,8 @@ class Home extends Component{
                     branchName : response.data.branchName,
                     dateOfExam : response.data.dateOfExam,
                     classRoom : response.data.classroom,
+                    seatNumber : response.data.seatNumber,
+                    subject : response.data.subjectName,
                     isSearched : true,
                     scannedMessage: "",
                     scannedErrorMessage: "", 
@@ -63,7 +67,7 @@ class Home extends Component{
                     this.setState({
                         errorMessage : error.response.data.message,
                         isSearched : false, 
-                        scannedErrorMessage: "Try Again!", 
+                        scannedErrorMessage: "", 
                         scannedMessage : "" 
                     })
                 }
@@ -171,12 +175,24 @@ class Home extends Component{
                                 </div>
                                 <br/>
                                 <div className="row">
-                                    <h6 className = "col col-md-6 font-weight-bold">Exam Date : <span style={{color: "grey"}}>{this.state.dateOfExam.substring(0,10)}</span></h6>
+                                    <h6 className = "col col-md-6 font-weight-bold">Subject : <span className = "text-primary font-weight-bold">{this.state.subject}</span></h6>
+                                    <h6 className = "col col-md-6 font-weight-bold">Exam Date : 
+                                        <span className = "text-primary font-weight-bold">
+                                            {   " "
+                                                + this.state.dateOfExam.toString().split("T")[0]
+                                                + " "
+                                                + this.state.dateOfExam.toString().split("T")[1].split(":")[0]
+                                                + ":"
+                                                + this.state.dateOfExam.toString().split("T")[1].split(":")[1]
+                                                + " IST"
+                                            }
+                                        </span>
+                                    </h6>
                                 </div> 
                             </div>
                             <div class="card-footer">
                                 <h5 className = "font-weight-bold">Allocated Classroom : </h5>
-                                <h4 className = "text-primary font-weight-bold">{this.state.classRoom}</h4>
+                                <h4 className = "text-primary font-weight-bold">{this.state.classRoom} / {this.state.seatNumber}</h4>
                             </div>
                         </div>
                     </div>

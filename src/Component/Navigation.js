@@ -6,7 +6,6 @@ import StudentRegister from "./StudentRegister";
 import Teacherlogin from "./Teacherlogin";
 import TeacherRegister from "./TeacherRegister";
 import Home from "./Home";
-import CreateCourse from "./CreateCourse";
 import Classrooms from "./Classrooms";
 import Branches from "./Branches";
 import Subjects from "./Subjects";
